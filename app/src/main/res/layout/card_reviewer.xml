@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    android:id="@+id/cardku"
     android:layout_margin="10dp"
     android:elevation="10dp"
     app:cardElevation="10dp"
@@ -29,7 +30,7 @@
             <TextView
                 android:textColor="#693DB6"
                 android:id="@+id/yourname"
-                android:text="Your Name"
+                android:text="Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
