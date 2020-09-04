@@ -62,10 +62,11 @@ public class ListData extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
+
     }
 
     void adddataOnline() {
-        AndroidNetworking.get("https://api.themoviedb.org/3/movie/550?api_key=795e4d09eaa1fb8959311b5252604a6d")
+        AndroidNetworking.get("https://api.themoviedb.org/3/movie/now_playing?api_key=6ac7a042ac3b7599a689eb943fa0b6d0&language=en-US")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -91,7 +92,7 @@ public class ListData extends AppCompatActivity {
                                 MovieDataArrayList.add(modelku);
 
                             }
-                            adapter = new DataAdapter(MovieDataArrayList, new DataAdapter.Callback() {
+                            adapter = new DataAdapter(DataArrayList, new DataAdapter.Callback() {
                                 @Override
                                 public void onClick(int position) {
 
@@ -102,7 +103,7 @@ public class ListData extends AppCompatActivity {
 
                                 }
                             });
-                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListData.this);
+                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Listdata.this);
                             recyclerView.setLayoutManager(layoutManager);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
