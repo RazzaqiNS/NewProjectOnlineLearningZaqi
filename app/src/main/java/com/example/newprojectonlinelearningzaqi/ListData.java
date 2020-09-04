@@ -92,7 +92,7 @@ public class ListData extends AppCompatActivity {
                                 MovieDataArrayList.add(modelku);
 
                             }
-                            adapter = new DataAdapter(DataArrayList, new DataAdapter.Callback() {
+                            adapter = new DataAdapter(MovieDataArrayList, new DataAdapter.Callback() {
                                 @Override
                                 public void onClick(int position) {
 
@@ -103,7 +103,7 @@ public class ListData extends AppCompatActivity {
 
                                 }
                             });
-                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Listdata.this);
+                            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListData.this);
                             recyclerView.setLayoutManager(layoutManager);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
